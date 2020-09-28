@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '377842530041154',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v8.0'
+            });
+            FB.api('/me', {
+                fields: 'last_name'
+            }, function(response) {
+                console.log(response);
+            });
+        };
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+</body>
+
+</html>
